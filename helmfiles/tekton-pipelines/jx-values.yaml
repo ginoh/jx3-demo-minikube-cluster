@@ -32,10 +32,12 @@ jxRequirements:
     provider: minikube
   environments:
   - key: dev
+    owner: ginoh
+    repository: jx3-demo-minikube-cluster
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: 192.168.64.4.nip.io
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -tekton-pipelines.
@@ -43,6 +45,8 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: ginoh
   repository: bucketrepo
   secretStorage: local
   vault: {}
